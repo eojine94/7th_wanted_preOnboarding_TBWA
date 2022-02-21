@@ -1,0 +1,318 @@
+body {
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*  */
+/*  */
+/*  */
+
+/* .home_contents_class {
+} */
+
+.inbox {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.home_contents_head {
+  padding: 90px 0 0;
+}
+
+.tit {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 300;
+  letter-spacing: -0.45px;
+  color: #222;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.tit > span {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 300;
+  letter-spacing: -0.45px;
+  color: #222;
+}
+
+.tit > b {
+  font-weight: 700;
+}
+
+.products {
+  padding: 40px 0 120px;
+  position: relative;
+}
+
+.event_class {
+  float: left;
+  width: 50%;
+  padding-right: 2%;
+}
+
+.link {
+  position: relative;
+  display: block;
+}
+
+.img_pc {
+  width: 100%;
+  height: 100%;
+}
+
+.name {
+  position: absolute;
+  bottom: 7%;
+  left: 35px;
+  padding-right: 20px;
+  font-size: 25px;
+  line-height: 37px;
+  font-weight: 700;
+  letter-spacing: -0.38px;
+  color: #222;
+
+  z-index: 2;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.name:after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  right: 4px;
+  background-image: url(../images/kukka.png);
+  background-position: -1238px -375px;
+  width: 11px;
+  height: 19px;
+  background-size: 1252px 845px;
+  text-align: center;
+}
+
+.desc {
+  bottom: 18%;
+  left: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+  letter-spacing: -0.27px;
+  color: #222;
+  position: absolute;
+  z-index: 2;
+  max-width: 90%;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.event_class + .special_class {
+  float: right;
+  width: 50%;
+}
+
+.item {
+  padding-top: 0;
+}
+
+.detail {
+  padding-bottom: 0;
+  margin: 0;
+  position: relative;
+}
+
+.thumnail {
+  position: relative;
+  top: inherit;
+  left: inherit;
+  float: left;
+  width: 42%;
+}
+
+.detail .thumnail .link {
+  overflow: hidden;
+  display: block;
+  background: #fafafa;
+  text-decoration: none;
+  outline-width: 1px;
+}
+
+.link > img {
+  display: block;
+  width: 100%;
+}
+
+.link .image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
+.link .image:hover {
+  transform: scale(1.05);
+  transition: transform 0.25s ease-in-out;
+}
+
+.category_product_bdg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  min-height: 105px;
+}
+
+.detail .summary {
+  overflow: hidden;
+  height: auto;
+  padding: 0 0 0 20px;
+}
+
+.detail .summary .name_1 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 100;
+  letter-spacing: -0.18px;
+  color: #787878;
+
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.name_1 + .name_2 {
+  margin-top: 2px;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  color: #222;
+
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  cursor: pointer;
+}
+
+.name_2 + .discount {
+  margin-top: 5px;
+  display: block;
+}
+
+.summary .price {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  color: #222;
+
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.discount + .more {
+  margin-top: 10px;
+  display: block;
+}
+
+.summary .showroom {
+  margin-top: 15px;
+  position: relative;
+  bottom: inherit;
+  left: inherit;
+  display: block;
+}
+
+.showroom .off {
+  margin: 0;
+  background: 0 0;
+  outline: 0;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 52px;
+  padding: 0 8px;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  vertical-align: middle;
+  border: #ffcd32 1px solid;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: -0.15px;
+  color: #ffcd32;
+}
+
+.showroom .off.gwang {
+  border-color: #a27fde;
+  color: #a27fde;
+}
+
+.showroom .off.jam {
+  border-color: #46cfa7;
+  color: #46cfa7;
+}
+
+.showroom .off.wolgye {
+  border-color: #ffa04d;
+  color: #ffa04d;
+}
+
+.showroom .off.guro {
+  border-color: #68a4fe;
+  color: #68a4fe;
+}
+
+.showroom .off:last-of-type {
+  margin-right: 0;
+}
+
+.showroom .off.dongrae {
+  border-color: #00afe3;
+  color: #00afe3;
+}
+
+.detail:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.item + .item {
+  margin-top: 5%;
+  padding-top: 5%;
+  border-top: #d3d3d3 1px solid;
+}
+
+.category_product_detail {
+  display: block;
+}
+
+.more_link {
+  display: block;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: -0.21px;
+  color: #787878;
+  font-family: 'Noto Sans KR', sans-serif;
+}
