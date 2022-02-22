@@ -90,6 +90,28 @@
   width: 50%;
 }
 
+.leftBtn {
+  position: absolute;
+  top: 125%;
+  left: -65px;
+  background: url('../images/kukka.png') no-repeat -1166px -252px;
+  width: 68px;
+  height: 69px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.rightBtn {
+  position: absolute;
+  top: 125%;
+  right: -65px;
+  background: url('../images/kukka.png') no-repeat no-repeat -1116px -500px;
+  width: 68px;
+  height: 69px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .products .special_class .item {
   padding-top: 0;
 }
@@ -246,10 +268,10 @@
   border-color: #68a4fe;
   color: #68a4fe;
 }
-/* 
+
 .summary .showroom .off:last-of-type {
   margin-right: 0;
-} */
+}
 
 .summary .showroom .off.dongrae {
   border-color: #00afe3;
@@ -280,81 +302,6 @@
   color: #787878;
 }
 
-@media (max-width: 1024px) {
-  .home_contents_class {
-    height: 800px;
-    margin-bottom: 0;
-  }
-
-  .inbox .products .event_class {
-    position: relative;
-    width: 100%;
-    padding: 0;
-  }
-
-  .event_class .link .name {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 900;
-  }
-
-  .event_class .link .name:after {
-    top: 3px;
-    right: 2px;
-    background-image: url(../images/kukka.png);
-  }
-
-  .event_class .link .desc {
-    position: absolute;
-    bottom: 16%;
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .products .event_class + .special_class {
-    width: 100%;
-  }
-
-  .products .special_class .item {
-    padding-top: 20px;
-  }
-
-  .products .special_class .item + .item {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: #ececec 1px solid;
-  }
-
-  .item .category_product_detail .detail {
-    position: relative;
-    padding-left: 160px;
-  }
-
-  .category_product_detail .detail .thumnail {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 144px;
-  }
-
-  .inbox .products .more_link {
-    display: none;
-  }
-
-  .leftBtn {
-    top: 200%;
-    left: -65px;
-  }
-
-  .rightBtn {
-    top: 200%;
-    right: -65px;
-  }
-}
-body {
-  box-sizing: border-box;
-  font-family: 'Noto Sans KR', sans-serif;
-}
 .test {
   position: relative;
 }
@@ -428,9 +375,7 @@ body {
   text-align: center;
   font-weight: 500;
 }
-a {
-  color: black;
-}
+
 .brand_story_background:hover,
 .offline_showroom_background:hover {
   transform: scale(1.01);
@@ -439,9 +384,7 @@ a {
 .hidden {
   display: none;
 }
-.wrapper {
-  height: 1000px;
-}
+
 .slide_wrapper {
   margin-bottom: 500px;
 }
@@ -519,18 +462,8 @@ a {
 .yellow {
   background-color: #f5ca5f;
 }
-@media (max-width: 1024px) {
-  .banner_wrapper {
-    display: none;
-  }
-}
-@media (min-width: 1024px) {
-  .slide_wrapper {
-    display: none;
-  }
-}
 
-/* modal */
+/* -----------------------------------modal */
 
 .modal {
   position: absolute;
@@ -560,14 +493,6 @@ a {
   background-color: black;
   color: white;
   width: 600px;
-}
-
-@media (max-width: 1024px) {
-  .popUp {
-    width: 300px;
-  }
-}
-.popUpImg {
 }
 
 .popUpImg img {
@@ -600,10 +525,11 @@ a {
   overflow: hidden;
 }
 
-/* Youtube */
+/* ------------------------------Youtube */
 .ytContainer {
   max-width: 1120px;
   margin: 0 auto;
+  margin-top: 70px;
 }
 
 .videoWrapper {
@@ -620,133 +546,87 @@ a {
   height: 100%;
 }
 
-/* MEMO: nav */
-.nav {
-  height: 40px;
-  background-color: #393939;
-  z-index: 1000;
-}
-
-.navContainer {
-  height: 130px;
-  background-color: white;
-}
-
+/* --------------------------------MEMO: nav */
 .header {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 60px;
+  width: 100%;
 }
 
-.topBannerInner {
-  position: relative;
-  margin-left: 36.5%;
+.topBanner {
+  width: 100%;
+  background-color: #393939;
+  height: 40px;
+  text-align: center;
 }
 
 .topBannerImg {
-  /* position: absolute;
-  left: 52.5ch;
-  width: 305px;
-  height: 40px; */
-  float: left;
   width: 305px;
   height: 40px;
-
   cursor: pointer;
 }
 
-.navBar {
+.topMenu {
+  margin: 0 auto;
+  max-width: 1120px;
+  height: 30px;
+  text-align: center;
+  padding-top: 10px;
 }
 
-.navBarUserName {
+.content {
   float: right;
-  margin-top: 40px;
-  padding: 10px 0 0 0;
 }
 
-/* .userNameFloat {
-  float: right;
-} */
+.content li {
+  float: left;
+}
 
 .divisionLine {
   padding: 0 15px;
 }
 
-li {
-  display: inline-block;
-  vertical-align: top;
-}
-
 .userNameDetail {
-  display: inline-block;
-  padding: 0;
-  background-color: transparent;
   color: #3a3a3a;
   font-size: 14px;
-  text-decoration: none !important;
   cursor: pointer;
 }
 
-.navPosition {
-  position: absolute;
-  top: 80px;
+.navBar {
+  width: 100%;
+  height: 90px;
+  background-color: white;
+  border-bottom: 1px solid #dbdbdb;
 }
 
-.navSticky {
-  position: relative;
-  width: 1240px;
-  background-color: white;
+.navContent {
+  margin: 0 auto;
+  padding: 20px 20px;
+  height: 90px;
+  max-width: 1120px;
 }
 
 .navLogo {
-  /* position: absolute;
-  top: 20px;
-  left: 0px;
-  width: 128px;
-  height: 52px;
-  margin: 0;
-  padding: 0; */
   float: left;
   width: 128px;
   height: 52px;
-  margin: 0;
-  margin-top: 20px;
   cursor: pointer;
 }
 
-.navBarListName {
-  /* position: absolute;
-  top: 35px;
-  left: 55ch; 
-  */
+.navBarMenu {
+  display: block;
+  margin-top: 10px;
   float: left;
-  margin-top: 2.7%;
-  margin-left: 20%;
+  margin-left: 80px;
 }
 
-.listDetail {
-  display: inline-block;
-  margin: 0 15px;
-  background-color: transparent;
-  color: #222;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: -0.27px;
-  text-decoration: none !important;
-  outline: 0;
-  cursor: pointer;
-}
+.navBarMenu li {
+  float: left;
 
-#toVideo {
-  display: inline-block;
-  margin: 0 35px;
-  background-color: transparent;
+  margin-right: 40px;
   color: #222;
   font-size: 18px;
   font-weight: 600;
   line-height: 27px;
   letter-spacing: -0.27px;
-  text-decoration: none !important;
   outline: 0;
   cursor: pointer;
 }
@@ -755,31 +635,17 @@ li {
   border-bottom: solid 4px #ffcd32;
 }
 
-#toFlowerClass {
-  display: inline-block;
-  margin: 0 35px;
-  background-color: transparent;
-  color: #222;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 27px;
-  letter-spacing: -0.27px;
-  text-decoration: none !important;
-  outline: 0;
-  cursor: pointer;
-}
-
 #toFlowerClass:hover {
   border-bottom: solid 4px #ffcd32;
 }
 
 .navBarIcon {
-  /* position: absolute;
-  top: 30px;
-  right: 128px; */
   float: right;
-  margin-top: 2.5%;
-  margin-right: 10.2%;
+  margin-top: 10px;
+}
+
+.navBarIcon li {
+  float: left;
 }
 
 .navIcon {
@@ -788,49 +654,41 @@ li {
   cursor: pointer;
 }
 
-/* MEMO: footer */
+.fixedNav {
+  position: fixed;
+  top: 0;
+  border-bottom: solid 2px #ffcd32;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------MEMO: footer------------------------------- */
 .footer {
-  /* position: relative; */
-  display: block;
-  bottom: 0;
-  max-width: 100%;
-  height: 380px;
   background-color: #222;
 }
 
-.footerContainer {
-  display: block;
-  height: 380px;
-}
-
 .footerInner {
-  position: relative;
   max-width: 1240px;
-  /* height: 380px; */
   margin: 0 auto;
   padding: 80px 60px;
-}
-
-.snsIcons {
-  height: 32px;
-  cursor: pointer;
 }
 
 .footerICon {
   width: 32px;
   height: 32px;
   margin-right: 16px;
+  cursor: pointer;
 }
 
-.contact {
-  float: left;
-  width: 600px;
+.lineOn {
+  width: 100%;
   padding-top: 15px;
 }
+.contact {
+  display: inline-block;
+}
 
-.contact dt {
-  float: left;
-  display: block;
+.contact .centerTitle {
   font-size: 22px;
   line-height: 33px;
   font-weight: 600;
@@ -838,50 +696,12 @@ li {
   color: #f7f7f7;
 }
 
-.contact dd.centerNum {
-  float: left;
-  display: block;
+.contact .centerTime {
   margin-left: 10px;
-  font-size: 22px;
-  line-height: 33px;
-  font-weight: 300;
-  letter-spacing: -0.33px;
-  color: white;
-}
-
-.contact dd.centerTime {
-  float: left;
-  display: block;
-  margin-left: 10px;
-  margin-top: 0;
   font-size: 14px;
-  line-height: 33px;
   font-weight: 300;
   letter-spacing: -0.21px;
   color: #9b9b9b;
-}
-
-.supportCenter {
-  position: absolute;
-  top: 120px;
-  left: 670px;
-  padding: 10px 15px;
-  border: solid 1px white;
-  border-radius: 20px;
-  color: white;
-  font-weight: 600;
-}
-
-.supportCenter:hover {
-}
-
-.footerLogo {
-  position: absolute;
-  top: 120px;
-  right: 60px;
-
-  width: 150px;
-  height: 63px;
 }
 
 .addParterTel {
@@ -892,46 +712,209 @@ li {
   font-weight: 100;
 }
 
-@media (min-width: 1024px) {
-  .addParterTel {
-    float: none;
-    clear: both;
-    padding: 5px 0 0;
-  }
+.supportCenter {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.supportCenter span {
+  padding: 7px 15px;
+  border: solid 1px white;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+.footerLogo {
+  float: right;
 }
 
 .footerLine {
   height: 1px;
-  position: absolute;
-  display: block;
-  top: 200px;
-  width: 1120px;
-  opacity: 0.2;
+  border: 0.5px solid grey;
+  margin: 30px 0px;
+}
+
+.lineUnder {
+  width: 100%;
+  height: 100%;
 }
 
 .about {
-  position: absolute;
-  top: 230px;
-
-  color: white;
+  display: inline-block;
 }
 
-.about > dd {
-  margin-right: 18px;
-  font-size: 14px;
-  line-height: 6px;
-  font-weight: 300;
-  letter-spacing: -0.21px;
+.aboutP {
+  color: #9b9b9b;
 }
 
 .tems {
-  position: absolute;
-  top: 285px;
-  right: 60px;
+  height: 100%;
+  float: right;
+  margin-top: 65px;
+  color: white;
 }
 
 .temsText {
   margin-left: 20px;
-  color: white;
-  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  /* homeclass */
+  .home_contents_class {
+    height: 800px;
+    margin-bottom: 0;
+  }
+
+  .inbox .products .event_class {
+    position: relative;
+    width: 100%;
+    padding: 0;
+  }
+
+  .event_class .link .name {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 900;
+  }
+
+  .event_class .link .name:after {
+    top: 3px;
+    right: 2px;
+    background-image: url(../images/kukka.png);
+  }
+
+  .event_class .link .desc {
+    position: absolute;
+    bottom: 16%;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .products .event_class + .special_class {
+    width: 100%;
+  }
+
+  .products .special_class .item {
+    padding-top: 20px;
+  }
+
+  .products .special_class .item + .item {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: #ececec 1px solid;
+  }
+
+  .item .category_product_detail .detail {
+    position: relative;
+    padding-left: 160px;
+  }
+
+  .category_product_detail .detail .thumnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 144px;
+  }
+
+  .inbox .products .more_link {
+    display: none;
+  }
+
+  .leftBtn {
+    top: 200%;
+    left: -65px;
+  }
+
+  .rightBtn {
+    top: 200%;
+    right: -65px;
+  }
+
+  /* modal */
+  .popUp {
+    width: 300px;
+  }
+
+  /* nav */
+  .navBar {
+    height: 50px;
+  }
+  .navContent {
+    display: block;
+  }
+
+  .topMenu {
+    display: none;
+  }
+
+  .navContent {
+    height: 50px;
+    padding: 10px 20px;
+  }
+
+  .navLogo img {
+    width: 64px;
+    height: 26px;
+    cursor: pointer;
+  }
+
+  .navBarMenu {
+    margin-top: -2px;
+    margin-left: 0px;
+  }
+
+  .navBarMenu li {
+    font-size: 16px;
+  }
+
+  .navIcon {
+    width: 20px;
+  }
+  .navBarIcon {
+    margin-top: 0px;
+  }
+  .navBarIcon li:nth-child(1) {
+    display: none;
+  }
+
+  /*  footer */
+  .contact {
+    display: block;
+  }
+
+  .contact .centerTitle {
+    display: block;
+    font-size: 18px;
+  }
+
+  .contact .centerTime {
+    margin-left: 0px;
+    font-size: 12px;
+  }
+
+  .addParterTel {
+    font-size: 14px;
+  }
+
+  .footerLogo {
+    display: none;
+  }
+
+  .supportCenter {
+    margin-left: 0px;
+    font-size: 12px;
+  }
+
+  .aboutP {
+    font-size: 11px;
+  }
+
+  .tems {
+    float: none;
+    font-size: 12px;
+    margin-top: 20px;
+  }
 }

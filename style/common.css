@@ -3,3 +3,7 @@
 body {
   font-family: 'Noto Sans KR', sans-serif !important;
 }
+
+a {
+  color: black;
+}

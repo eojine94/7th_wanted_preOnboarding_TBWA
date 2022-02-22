@@ -11,10 +11,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
-
   <link rel="shortcut icon" type="image⁄x-icon" href="./images/logo.png" />
   <script src="https://kit.fontawesome.com/8c40fdbae4.js" crossorigin="anonymous"></script>
   <script src="./index.js" defer></script>
@@ -37,71 +33,57 @@
     </div>
   </div>
 
-  <!-- MEMO: nav (start)-->
-  <div class="nav stickyBackground">
-    <div class="header">
-      <article class="topBanner">
-        <div class="topBannerInner">
-          <a>
-            <img class="topBannerImg" src="../images/nav/TopBanner.jpeg" />
-          </a>
-        </div>
-      </article>
+  <div class="header">
+      <div class="topBanner">
+        <img class="topBannerImg" src="../images/nav/TopBanner.jpeg" />
+      </div>
+
+      <div class="topMenu">
+        <ul class="content">
+          <li>
+            <span class="userNameDetail">로그인</span>
+            <span class="divisionLine">|</span>
+          </li>
+          <li>
+            <span class="userNameDetail">회원가입</span>
+            <span class="divisionLine">|</span>
+          </li>
+          <li>
+            <span class="userNameDetail">꾸까 고객센터</span>
+            <span class="divisionLine">|</span>
+          </li>
+          <li>
+            <span class="userNameDetail">기업제휴</span>
+          </li>
+        </ul>
+      </div>
 
       <div class="navBar">
-        <div class="navBarUser">
-          <ul class="navBarUserName">
-            <div class="userNameFloat">
-              <li>
-                <a class="userNameDetail">로그인</a>
-                <span class="divisionLine">|</span>
-              </li>
-              <li>
-                <a class="userNameDetail">회원가입</a>
-                <span class="divisionLine">|</span>
-              </li>
-              <li>
-                <a class="userNameDetail">꾸까 고객센터</a>
-                <span class="divisionLine">|</span>
-              </li>
-              <li>
-                <a>
-                  <strong class="userNameDetail">기업제휴</strong>
-                </a>
-              </li>
-            </div>
+        <div class="navContent">
+          <div class="navLogo">
+            <img src="../images/nav/NavLogo.png" />
+          </div>
+
+          <ul class="navBarMenu">
+            <li>
+              <span id="toVideo">영상</span>
+            </li>
+            <li>
+              <span id="toFlowerClass">플라워클래스</span>
+            </li>
+          </ul>
+
+          <ul class="navBarIcon">
+            <li>
+              <img class="navIcon" src="../images/nav/NavIcon1.png" />
+            </li>
+            <li>
+              <img class="navIcon" src="../images/nav/NavIcon2.png" />
+            </li>
           </ul>
         </div>
-
-        <div class="navPosition">
-          <div class="navSticky">
-            <div>
-              <a><img class="navLogo" src="../images/nav/NavLogo.png" /></a>
-            </div>
-            <ul class="navBarListName">
-              <li>
-                <span id="toVideo">영상</span>
-              </li>
-              <li>
-                <span id="toFlowerClass">플라워클래스</span>
-              </li>
-            </ul>
-
-            <ul class="navBarIcon">
-              <li>
-                <a><img class="navIcon" src="../images/nav/NavIcon1.png" /></a>
-              </li>
-              <li>
-                <a><img class="navIcon" src="../images/nav/NavIcon2.png" /></a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
-    </div>
   </div>
-  <div class="navContainer"></div>
-  <!-- MEMO: nav (end)-->
 
   <div class="ytContainer">
     <div class="videoWrapper">
@@ -191,6 +173,7 @@
       </div>
     </div>
   </div>
+
   <div class="wrapper">
     <div class="banner_wrapper">
       <div class="banner">
@@ -202,7 +185,7 @@
                 꽃으로 라이프 스타일을 만들어가는
                 <br>
                 kukka의 문화를 소개해요.
-                <span class="more">Brand story</span>
+                <span class="more_btn">Brand story</span>
               </b>
           </a>
         </div>
@@ -215,31 +198,14 @@
               꽃을 가까이서 만져보고 향기도 맡아보고,
               <br>
               꽃 속에서 작은 휴식을 누릴 수 있는 kukka의 오프라인 쇼룸.
-              <span class="more">꾸까 쇼룸 안내</span>
+              <span class="more_btn">꾸까 쇼룸 안내</span>
             </b>
           </div>
         </a>
       </div>
     </div>
-    <div class="slide_wrapper">
-      <div class='container'>
-        <div class="slide_main_title">
-          <h1 class="slide_title">꾸까 브랜드 스토리</h1>
-          <h4 class="slide_more">더보기</h4>
-        </div>
-        <button type='button' class='btn_left'><i class='fas fa-chevron-left'></i></button>
-        <img id="slide_images" />
-        <div class="slide_story_title"></div>
-        <div class="slide_story_des"></div>
-        <button type='button' class='btn_right'><i class='fas fa-chevron-right'></i></button>
-      </div>
-      <div class='slide_bar'>
-        <div class="slide"></div>
-        <div class="slide"></div>
-      </div>
-    </div>
   </div>
-  </div>
+
   <div class="footer">
     <div class="footerInner">
       <div class="snsIcons">
@@ -283,6 +249,6 @@
       </div>
     </div>
   </div>
-</body>
 
+</body>
 </html>
