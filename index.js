@@ -326,7 +326,7 @@ var TRANSPARENT = 'transparent';
 var endIndex = 2;
 var slideIndex = 0;
 
-var slideImages = ['../images/Banner1.png', '../images/Banner2.png'];
+var slideImages = ['./images/Banner1.png', './images/Banner2.png'];
 
 function startSlideShow() {
   if (slideIndex === 0) {
@@ -394,7 +394,7 @@ function coloringSlideBarLeft() {
   }
 }
 // 화살표 버튼 말고 슬라이드 바 눌렀을 때 해당 순번의 이미지 보이게 하기 & 슬라이드 바에 색상 넣어주기
-for (let k = 0; k < endIndex; k++) {
+for (var k = 0; k < endIndex; k++) {
   slideBar[k].addEventListener('click', function () {
     var markingSlideBar = document.querySelector('.yellow');
     slideIndex = k;
@@ -406,7 +406,3 @@ for (let k = 0; k < endIndex; k++) {
     }
   });
 }
-
-// slideStoryTitle.textContent = '꾸까 브랜드 이야기';
-// slideStoryDes.textContent =
-//   '꽃으로 라이브스타일을 만들어가는 \n kukka의 문화를 소개해요.';
