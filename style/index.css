@@ -223,7 +223,9 @@
   outline: 0;
   color: #ffcd32;
 }
-
+.name_3 {
+  width: 350px;
+}
 .summary .showroom .off.gwang {
   border-color: #a27fde;
   color: #a27fde;
@@ -243,10 +245,10 @@
   border-color: #68a4fe;
   color: #68a4fe;
 }
-
+/* 
 .summary .showroom .off:last-of-type {
   margin-right: 0;
-}
+} */
 
 .summary .showroom .off.dongrae {
   border-color: #00afe3;

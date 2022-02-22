@@ -11,34 +11,56 @@
 </head>
 
 <body>
-  <div class="banner">
-    <div class="brand_story">
-      <a href='/' class="link">
-        <div class="brand_story_background">
-          <strong class="title">꾸까 브랜드 이야기</strong>
+  <div class="banner_wrapper">
+    <div class="banner">
+      <div class="brand_story">
+        <a href='/' class="link">
+          <div class="brand_story_background">
+            <strong class="title">꾸까 브랜드 이야기</strong>
+            <b class="description">
+              꽃으로 라이프 스타일을 만들어가는
+              <br>
+              kukka의 문화를 소개해요.
+              <span class="more">Brand story</span>
+            </b>
+        </a>
+      </div>
+    </div>
+    <div class="offline_showroom">
+      <a href="/" class="link">
+        <div class="offline_showroom_background">
+          <strong class="title">꾸까 오프라인 쇼룸</strong>
           <b class="description">
-            꽃으로 라이프 스타일을 만들어가는
+            꽃을 가까이서 만져보고 향기도 맡아보고,
             <br>
-            kukka의 문화를 소개해요.
-            <span class="more">Brand story</span>
+            꽃 속에서 작은 휴식을 누릴 수 있는 kukka의 오프라인 쇼룸.
+            <span class="more">꾸까 쇼룸 안내</span>
           </b>
+        </div>
       </a>
     </div>
   </div>
-  <div class="offline_showroom">
-    <a href="/" class="link">
-      <div class="offline_showroom_background">
-        <strong class="title">꾸까 오프라인 쇼룸</strong>
-        <b class="description">
-          꽃을 가까이서 만져보고 향기도 맡아보고,
-          <br>
-          꽃 속에서 작은 휴식을 누릴 수 있는 kukka의 오프라인 쇼룸.
-          <span class="more">꾸까 쇼룸 안내</span>
-        </b>
+  </div>
+  <div class="slide_wrapper">
+    <div class='container'>
+      <div class="slide_main_title">
+        <h1 class="slide_title">꾸까 브랜드 스토리</h1>
+        <h4 class="slide_more">더보기</h4>
       </div>
-    </a>
+      <button type='button' class='btn_left'><i class='fas fa-chevron-left'></i></button>
+      <img id="images" />
+      <div class="slide_story_title"></div>
+      <div class="slide_story_des"></div>
+      <button type='button' class='btn_right'><i class='fas fa-chevron-right'></i></button>
+    </div>
+    <div class='slide_bar'>
+      <div class="slide"></div>
+      <div class="slide"></div>
+    </div>
   </div>
   </div>
+  <script src="Banner.js"></script>
+  <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
