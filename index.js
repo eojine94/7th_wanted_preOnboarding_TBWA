@@ -265,27 +265,14 @@ function moveToFlowerClass() {
 }
 
 // MEMO: nav - sticky 효과
-var nav = document.querySelector('.navSticky');
-var navBackground = document.querySelector('.stickyBackground');
+var nav = document.querySelector('.navBar');
 var rectTop = nav.getBoundingClientRect().top;
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > rectTop) {
-    nav.style.position = 'fixed';
-    nav.style.top = 0;
-    nav.style.height = '90px';
-    nav.style.borderBottom = 'solid 2px #ffcd32';
-    navBackground.style.position = 'fixed';
-    navBackground.style.width = '100%';
-    navBackground.style.height = '90px';
-    navBackground.style.backgroundColor = 'white';
-    navBackground.style.borderBottom = 'solid 2px #ffcd32';
-    navBackground.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    nav.classList.add('fixedNav');
   } else {
-    nav.style.position = 'fixed';
-    nav.style.top = '80px';
-    nav.style.border = 'none';
-    navBackground.style = 'none';
+    nav.classList.remove('fixedNav');
   }
 });
 

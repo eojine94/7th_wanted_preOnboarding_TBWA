@@ -419,9 +419,6 @@ a {
   width: 600px;
 }
 
-.popUpImg {
-}
-
 .popUpImg img {
   width: 100%;
   height: 100%;
@@ -456,6 +453,7 @@ a {
 .ytContainer {
   max-width: 1120px;
   margin: 0 auto;
+  margin-top: 100px;
 }
 
 .videoWrapper {
@@ -473,132 +471,86 @@ a {
 }
 
 /* MEMO: nav */
-.nav {
-  height: 40px;
-  background-color: #393939;
-  z-index: 1000;
-}
-
-.navContainer {
-  height: 130px;
-  background-color: white;
-}
-
 .header {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 60px;
+  width: 100%;
 }
 
-.topBannerInner {
-  position: relative;
-  margin-left: 36.5%;
+.topBanner {
+  width: 100%;
+  background-color: #393939;
+  height: 40px;
+  text-align: center;
 }
 
 .topBannerImg {
-  /* position: absolute;
-  left: 52.5ch;
-  width: 305px;
-  height: 40px; */
-  float: left;
   width: 305px;
   height: 40px;
-
   cursor: pointer;
 }
 
-.navBar {
+.topMenu {
+  margin: 0 auto;
+  max-width: 1120px;
+  height: 30px;
+  text-align: center;
+  padding-top: 10px;
 }
 
-.navBarUserName {
+.content {
   float: right;
-  margin-top: 40px;
-  padding: 10px 0 0 0;
 }
 
-/* .userNameFloat {
-  float: right;
-} */
+.content li {
+  float: left;
+}
 
 .divisionLine {
   padding: 0 15px;
 }
 
-/* li {
-  display: inline-block;
-  vertical-align: top;
-} */
-
 .userNameDetail {
-  display: inline-block;
-  padding: 0;
-  background-color: transparent;
   color: #3a3a3a;
   font-size: 14px;
-  text-decoration: none !important;
   cursor: pointer;
 }
 
-.navPosition {
-  position: absolute;
-  top: 80px;
+.navBar {
+  width: 100%;
+  height: 90px;
+  background-color: white;
+  border-bottom: 1px solid #dbdbdb;
 }
 
-.navSticky {
-  position: relative;
-  width: 1240px;
-  background-color: white;
+.navContent {
+  margin: 0 auto;
+  padding: 20px 20px;
+  height: 90px;
+  max-width: 1120px;
 }
 
 .navLogo {
-  /* position: absolute;
-  top: 20px;
-  left: 0px;
-  width: 128px;
-  height: 52px;
-  margin: 0;
-  padding: 0; */
   float: left;
   width: 128px;
   height: 52px;
-  margin: 0;
-  margin-top: 20px;
   cursor: pointer;
 }
 
-.navBarListName {
-  /* position: absolute;
-  top: 35px;
-  left: 55ch; 
-  */
+.navBarMenu {
+  display: block;
+  margin-top: 10px;
   float: left;
-  margin-top: 2.7%;
-  margin-left: 20%;
+  margin-left: 80px;
 }
 
-.listDetail {
-  display: inline-block;
-  margin: 0 15px;
-  background-color: transparent;
-  color: #222;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: -0.27px;
-  text-decoration: none !important;
-  outline: 0;
-  cursor: pointer;
-}
+.navBarMenu li {
+  float: left;
 
-#toVideo {
-  display: inline-block;
-  margin: 0 35px;
-  background-color: transparent;
+  margin-right: 40px;
   color: #222;
   font-size: 18px;
   font-weight: 600;
   line-height: 27px;
   letter-spacing: -0.27px;
-  text-decoration: none !important;
   outline: 0;
   cursor: pointer;
 }
@@ -607,37 +559,74 @@ a {
   border-bottom: solid 4px #ffcd32;
 }
 
-#toFlowerClass {
-  display: inline-block;
-  margin: 0 35px;
-  background-color: transparent;
-  color: #222;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 27px;
-  letter-spacing: -0.27px;
-  text-decoration: none !important;
-  outline: 0;
-  cursor: pointer;
-}
-
 #toFlowerClass:hover {
   border-bottom: solid 4px #ffcd32;
 }
 
 .navBarIcon {
-  /* position: absolute;
-  top: 30px;
-  right: 128px; */
   float: right;
-  margin-top: 2.5%;
-  margin-right: 10.2%;
+  margin-top: 10px;
+}
+
+.navBarIcon li {
+  float: left;
 }
 
 .navIcon {
   width: 25px;
   margin-left: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .navBar {
+    height: 50px;
+  }
+  .navContent {
+    display: block;
+  }
+
+  .topMenu {
+    display: none;
+  }
+
+  .navContent {
+    height: 50px;
+    padding: 10px 20px;
+  }
+
+  .navLogo img {
+    width: 64px;
+    height: 26px;
+    cursor: pointer;
+  }
+
+  .navBarMenu {
+    margin-top: -2px;
+    margin-left: 0px;
+  }
+
+  .navBarMenu li {
+    font-size: 16px;
+  }
+
+  .navIcon {
+    width: 20px;
+  }
+  .navBarIcon {
+    margin-top: 0px;
+  }
+  .navBarIcon li:nth-child(1) {
+    display: none;
+  }
+}
+
+.fixedNav {
+  position: fixed;
+  top: 0;
+  border-bottom: solid 2px #ffcd32;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* MEMO: footer */
