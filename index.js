@@ -24,6 +24,7 @@ closeBtn.addEventListener('click', closeModal);
 todayCloseBtn.addEventListener('click', closeTodayModal);
 
 window.onload = function () {
+  window.scrollTo(0, 0);
   if (document.cookie != 'popUpToday=close') {
     modal.style.display = 'block';
     document.body.classList.add('stopScroll');
