@@ -349,15 +349,14 @@
 
 /* Youtube */
 .ytContainer {
-  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .videoWrapper {
   position: relative;
-  max-width: 1120px;
-  margin: 0 auto;
-  height: auto;
-  padding-bottom: 50%;
+  height: 0;
+  padding-bottom: 56.25%;
 }
 
 .videoWrapper iframe {
