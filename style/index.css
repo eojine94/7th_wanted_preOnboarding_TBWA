@@ -302,10 +302,10 @@
   letter-spacing: -0.21px;
   color: #787878;
 }
-body {
+/* body {
   box-sizing: border-box;
   font-family: 'Noto Sans KR', sans-serif;
-}
+} */
 .test {
   position: relative;
 }
@@ -529,10 +529,10 @@ a {
   padding: 0 15px;
 }
 
-li {
+/* li {
   display: inline-block;
   vertical-align: top;
-}
+} */
 
 .userNameDetail {
   display: inline-block;
