@@ -1,4 +1,5 @@
 .home_contents_class {
+  margin-bottom: 400px;
 }
 
 .home_contents_class .inbox {
@@ -304,6 +305,11 @@
 }
 
 @media (max-width: 1024px) {
+  .home_contents_class {
+    height: 800px;
+    margin-bottom: 0;
+  }
+
   .inbox .products .event_class {
     position: relative;
     width: 100%;
