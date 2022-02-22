@@ -276,7 +276,91 @@
   letter-spacing: -0.21px;
   color: #787878;
 }
-
+body {
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.test {
+  position: relative;
+}
+.banner {
+  max-width: 100%;
+  height: 171px;
+  margin-top: 300px;
+  display: block;
+  overflow: hidden;
+}
+.brand_story_background {
+  position: relative;
+  width: 50%;
+  height: 171px;
+  background-image: url('../images/Banner1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.title {
+  position: absolute;
+  top: 33px;
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+.description {
+  position: absolute;
+  bottom: 65px;
+  left: 8%;
+  width: 85%;
+  color: black;
+  font-size: 15px;
+  line-height: 23px;
+  text-align: center;
+  font-weight: 500;
+}
+.more_btn {
+  position: absolute;
+  top: 55px;
+  left: 28%;
+  width: 42%;
+  height: 38px;
+  padding-top: 7px;
+  color: black;
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.offline_showroom_background {
+  position: relative;
+  left: 50%;
+  bottom: 171px;
+  width: 50%;
+  height: 171px;
+  background-image: url('../images/Banner2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.description_show_room {
+  position: absolute;
+  bottom: 65px;
+  left: 8%;
+  width: 85%;
+  font-size: 15px;
+  line-height: 23px;
+  text-align: center;
+  font-weight: 500;
+}
+a {
+  color: black;
+}
+.brand_story_background:hover,
+.offline_showroom_background:hover {
+  transform: scale(1.01);
+  transition: transform 0.25s ease-in-out;
+}
 /* modal */
 
 .modal {
