@@ -37,7 +37,7 @@
 
 .leftBtn {
   position: absolute;
-  top: 40%;
+  top: 125%;
   left: -65px;
   background: url('../images/kukka.png') no-repeat -1166px -252px;
   width: 68px;
@@ -106,7 +106,7 @@
 
 .rightBtn {
   position: absolute;
-  top: 40%;
+  top: 125%;
   right: -65px;
   background: url('../images/kukka.png') no-repeat no-repeat -1116px -500px;
   width: 68px;
@@ -302,6 +302,74 @@
   letter-spacing: -0.21px;
   color: #787878;
 }
+
+@media (max-width: 1024px) {
+  .inbox .products .event_class {
+    position: relative;
+    width: 100%;
+    padding: 0;
+  }
+
+  .event_class .link .name {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 900;
+  }
+
+  .event_class .link .name:after {
+    top: 3px;
+    right: 2px;
+    background-image: url(../images/kukka.png);
+  }
+
+  .event_class .link .desc {
+    position: absolute;
+    bottom: 16%;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .products .event_class + .special_class {
+    width: 100%;
+  }
+
+  .products .special_class .item {
+    padding-top: 20px;
+  }
+
+  .products .special_class .item + .item {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: #ececec 1px solid;
+  }
+
+  .item .category_product_detail .detail {
+    position: relative;
+    padding-left: 160px;
+  }
+
+  .category_product_detail .detail .thumnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 144px;
+  }
+
+  .inbox .products .more_link {
+    display: none;
+  }
+
+  .leftBtn {
+    top: 200%;
+    left: -65px;
+  }
+
+  .rightBtn {
+    top: 200%;
+    right: -65px;
+  }
+}
+
 /* body {
   box-sizing: border-box;
   font-family: 'Noto Sans KR', sans-serif;
