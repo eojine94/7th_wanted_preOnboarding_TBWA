@@ -85,50 +85,24 @@ var rightBtn = document.querySelector('.rightBtn');
 var leftBtn = document.querySelector('.leftBtn');
 
 var imgPc = document.querySelector('.img_pc');
-var imgFirstAtag = document.querySelector(
-  '.is_first .category_product_detail .detail .thumnail .link '
-);
-var imgFirstBg = document.querySelector(
-  '.is_first .category_product_detail .detail dt.thumnail a.link span.image '
-);
-var imgSecondAtag = document.querySelector(
-  '.is_second .category_product_detail .detail .thumnail .link '
-);
-var imgSecondBg = document.querySelector(
-  '.is_second .category_product_detail .detail dt.thumnail a.link span.image '
-);
+var imgFirstAtag = document.querySelector('.is_first .link ');
+var imgFirstBg = document.querySelector('.is_first .image ');
+var imgSecondAtag = document.querySelector('.is_second .link ');
+var imgSecondBg = document.querySelector('.is_second .image ');
 
-var nameFirst = document.querySelector(
-  '.is_first .category_product_detail .detail .summary .name_2 '
-);
-var nameSecond = document.querySelector(
-  '.is_second .category_product_detail .detail .summary .name_2 '
-);
+var nameFirst = document.querySelector('.is_first .name_2 ');
+var nameSecond = document.querySelector('.is_second .name_2 ');
 
-var priceFirst = document.querySelector(
-  '.is_first .category_product_detail .detail .summary .discount .price '
-);
-var priceSecond = document.querySelector(
-  '.is_second .category_product_detail .detail .summary .discount .price '
-);
+var priceFirst = document.querySelector('.is_first .price ');
+var priceSecond = document.querySelector('.is_second .price ');
 
-var showRoomFirst = document.querySelector(
-  '.is_first .category_product_detail .detail .summary .showroom '
-);
-var showRoomSecond = document.querySelector(
-  '.is_second .category_product_detail .detail .summary .showroom '
-);
+var showRoomFirst = document.querySelector('.is_first .showroom ');
+var showRoomSecond = document.querySelector('.is_second .showroom ');
 
 var classLength = FLOWER_CLASS_DATA.length;
 var classCount = 0;
 
-function handleRightBtn() {
-  if (classCount !== classLength - 1) {
-    classCount += 1;
-  } else {
-    classCount = 0;
-  }
-
+function handleButton() {
   var eventClass = FLOWER_CLASS_DATA.filter(
     el => el.id === classCount % classLength
   );
@@ -139,39 +113,41 @@ function handleRightBtn() {
     el => el.id === (classCount + 2) % classLength
   );
 
-  var showRoomFirstHtml = specialClassFirst[0].showroom.map(el => {
-    return (
-      '<a href="/" class="off ' +
-      el.engName +
-      '" data-offline="true" data-id="' +
-      el.dataId +
-      '">' +
-      el.korName +
-      '</a>'
-    );
-  });
+  function mappingBackgroundImage(data) {
+    return 'url("..' + data.imageUrl + '")';
+  }
 
-  var showRoomSecondHtml = specialClassSecond[0].showroom.map(el => {
-    return (
-      '<a href="/" class="off ' +
-      el.engName +
-      '" data-offline="true" data-id="' +
-      el.dataId +
-      '">' +
-      el.korName +
-      '</a>'
-    );
-  });
+  function mappingShowRoomHtml(arr) {
+    return arr.showroom.map(el => {
+      return (
+        '<a href="/" class="off ' +
+        el.engName +
+        '" data-offline="true" data-id="' +
+        el.dataId +
+        '">' +
+        el.korName +
+        '</a>'
+      );
+    });
+  }
+
+  var showRoomFirstHtml = mappingShowRoomHtml(specialClassFirst[0]);
+  var showRoomSecondHtml = mappingShowRoomHtml(specialClassSecond[0]);
 
   imgPc.src = 'http://127.0.0.1:5500' + eventClass[0].imageUrl;
-  imgFirstAtag.style.backgroundImage =
-    'url("..' + specialClassFirst[0].imageUrl + '")';
-  imgFirstBg.style.backgroundImage =
-    'url("..' + specialClassFirst[0].imageUrl + '")';
-  imgSecondAtag.style.backgroundImage =
-    'url("..' + specialClassSecond[0].imageUrl + '")';
-  imgSecondBg.style.backgroundImage =
-    'url("..' + specialClassSecond[0].imageUrl + '")';
+
+  imgFirstAtag.style.backgroundImage = mappingBackgroundImage(
+    specialClassFirst[0]
+  );
+  imgFirstBg.style.backgroundImage = mappingBackgroundImage(
+    specialClassFirst[0]
+  );
+  imgSecondAtag.style.backgroundImage = mappingBackgroundImage(
+    specialClassSecond[0]
+  );
+  imgSecondBg.style.backgroundImage = mappingBackgroundImage(
+    specialClassSecond[0]
+  );
 
   nameFirst.innerHTML = specialClassFirst[0].name;
   nameSecond.innerHTML = specialClassSecond[0].name;
@@ -183,6 +159,16 @@ function handleRightBtn() {
   showRoomSecond.innerHTML = showRoomSecondHtml.toString().replaceAll(',', '');
 }
 
+function handleRightBtn() {
+  if (classCount !== classLength - 1) {
+    classCount += 1;
+  } else {
+    classCount = 0;
+  }
+
+  handleButton();
+}
+
 function handleLeftBtn() {
   if (classCount !== 0) {
     classCount -= 1;
@@ -190,58 +176,7 @@ function handleLeftBtn() {
     classCount = classLength - 1;
   }
 
-  var eventClass = FLOWER_CLASS_DATA.filter(
-    el => el.id === classCount % classLength
-  );
-  var specialClassFirst = FLOWER_CLASS_DATA.filter(
-    el => el.id === (classCount + 1) % classLength
-  );
-  var specialClassSecond = FLOWER_CLASS_DATA.filter(
-    el => el.id === (classCount + 2) % classLength
-  );
-
-  var showRoomFirstHtml = specialClassFirst[0].showroom.map(el => {
-    return (
-      '<a href="/" class="off ' +
-      el.engName +
-      '" data-offline="true" data-id="' +
-      el.dataId +
-      '">' +
-      el.korName +
-      '</a>'
-    );
-  });
-
-  var showRoomSecondHtml = specialClassSecond[0].showroom.map(el => {
-    return (
-      '<a href="/" class="off ' +
-      el.engName +
-      '" data-offline="true" data-id="' +
-      el.dataId +
-      '">' +
-      el.korName +
-      '</a>'
-    );
-  });
-
-  imgPc.src = 'http://127.0.0.1:5500' + eventClass[0].imageUrl;
-  imgFirstAtag.style.backgroundImage =
-    'url("..' + specialClassFirst[0].imageUrl + '")';
-  imgFirstBg.style.backgroundImage =
-    'url("..' + specialClassFirst[0].imageUrl + '")';
-  imgSecondAtag.style.backgroundImage =
-    'url("..' + specialClassSecond[0].imageUrl + '")';
-  imgSecondBg.style.backgroundImage =
-    'url("..' + specialClassSecond[0].imageUrl + '")';
-
-  nameFirst.innerHTML = specialClassFirst[0].name;
-  nameSecond.innerHTML = specialClassSecond[0].name;
-
-  priceFirst.innerHTML = formatingNumber(specialClassFirst[0].price);
-  priceSecond.innerHTML = formatingNumber(specialClassSecond[0].price);
-
-  showRoomFirst.innerHTML = showRoomFirstHtml.toString().replaceAll(',', '');
-  showRoomSecond.innerHTML = showRoomSecondHtml.toString().replaceAll(',', '');
+  handleButton();
 }
 
 rightBtn.addEventListener('click', handleRightBtn);
