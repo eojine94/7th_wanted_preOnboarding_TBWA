@@ -64,6 +64,6 @@
 1. 파일 클론 받기
 
 ```
-git clone https://github.com/cotton-cotton/wanted_pre_onboarding_energybalance.git
+git clone https://github.com/tohjbin2/wanted_pre_onboarding_kukka.git
 ```
 
