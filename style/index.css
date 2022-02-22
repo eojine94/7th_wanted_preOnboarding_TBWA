@@ -29,14 +29,28 @@
 }
 
 .inbox .products .event_class {
+  position: relative;
   float: left;
   width: 50%;
   padding-right: 2%;
 }
 
+.leftBtn {
+  position: absolute;
+  top: 40%;
+  left: -65px;
+  background: url('../images/kukka.png') no-repeat -1166px -252px;
+  width: 68px;
+  height: 69px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .products .event_class .link {
   position: relative;
   display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .event_class .link .img_pc {
@@ -85,8 +99,20 @@
 }
 
 .products .event_class + .special_class {
+  position: relative;
   float: right;
   width: 50%;
+}
+
+.rightBtn {
+  position: absolute;
+  top: 40%;
+  right: -65px;
+  background: url('../images/kukka.png') no-repeat no-repeat -1116px -500px;
+  width: 68px;
+  height: 69px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .products .special_class .item {
