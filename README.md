@@ -46,7 +46,7 @@
 - 좌우 화살표 버튼을 클릭 시 count가 mock data의 갯수 안에서 증감.
 - count에 해당하는 id 값의 이미지 데이터가 name, price 등 해당하는 부분에 innerHtml 로서 들어감.
 
-**_5) Nav, Footer_**
+**_6) Nav, Footer_**
 - 카테고리 클릭시 해당 영역으로 이동
 - nav에 sticky 효과 적용 (position 사용 불가)
 - sns링크 클릭시 새창에서 열기
